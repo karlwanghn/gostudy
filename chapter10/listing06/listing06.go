@@ -3,7 +3,7 @@
 package main
 
 import (
-	"github.com/goinaction/code/chapter10/listing06/pubsub"
+	"github.com/karlwanghn/gostudy/chapter10/listing06/pubsub"
 )
 
 // publisher is an interface to allow this package to mock the
