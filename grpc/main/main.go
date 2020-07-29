@@ -26,7 +26,7 @@ func main() {
 	rpc.RegisterName("HelloService", new(HelloService))
 
 	//设置监听端口是
-	listener, err := net.Listen("tcp", ":1234")
+	listener, err := net.Listen("tcp", ":8080")
 	//如果返回错误，则进行处理
 	if err != nil {
 		log.Fatal("无法正常访问")
@@ -37,7 +37,7 @@ func main() {
 		log.Fatal("接收请求出错")
 	}
 	fmt.Println("是否在方法调用之前")
-	rpc.ServeConn(conn)
+	go rpc.ServeConn(conn)
 	log.Println("服务请求成功")
 
 }
