@@ -12,6 +12,7 @@ import (
 var wg sync.WaitGroup
 
 // main is the entry point for all Go programs.
+//go run会不定期的进行cpu资源调度
 func main() {
 	// Allocate 1 logical processors for the scheduler to use.
 	runtime.GOMAXPROCS(1)
