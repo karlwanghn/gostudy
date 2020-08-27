@@ -9,6 +9,8 @@ import (
 )
 
 // main is the entry point for all Go programs.
+//如果设置一个cpu，程序会按顺序执行，如果设置有多个
+//则程序会出现并发执行，大小打印交替出现
 func main() {
 	// Allocate 1 logical processor for the scheduler to use.
 	runtime.GOMAXPROCS(1)
